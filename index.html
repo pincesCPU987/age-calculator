@@ -26,8 +26,8 @@ function createChart(setPre,setSuff,startNumber,endNumber){
   prefix = setPre;
   suffix = setSuff;
   for(year = start; year < forEnd; year++){
-  var number = year - start;
-  console.log(prefix + number + suffix);
-  console.log(year);
-}
+    var number = year - start;
+    var p = document.createElement('p');
+    p.innerHTML = prefix + number + suffix + year;
+  }
 }</script>
