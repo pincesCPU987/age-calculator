@@ -4,11 +4,9 @@
   </head>
   <body>
     <form>
-Prefix (text): <input value="Age " type="text" name="pree" id="pree"/>
-Suffix (text): <input value=": " type="text" name="sufff" id="sufff"/>
 Born (year): <input value="2007" type="number" name="startt" id="startt"/>
 Now (year): <input value="2021" type="number" name="endd" id="endd"/>
-<input type="Submit" onclick="createChart(pree,sufff,startt,endd)"/>
+<input type="Submit" onclick="createChart(startt,endd)"/>
 </form>
   </body>
 </html>
@@ -16,18 +14,11 @@ Now (year): <input value="2021" type="number" name="endd" id="endd"/>
 var end = 0;
 var start = 0;
 var forEnd = 0;
-var prefix = 0;
-var suffix = 0;
                                         }
-function createChart(setPre,setSuff,startNumber,endNumber){
-  start = startNumber;
+function createChart(startNumber,endNumber){
+  start = startNumber
   end = endNumber;
   forEnd = end + 1;
-  prefix = setPre;
-  suffix = setSuff;
-  for(year = start; year < forEnd; year++){
-    var number = year - start;
-    var p = document.createElement('p');
-    p.innerHTML = prefix + number + suffix + year;
-  }
+ var p = document.createElementById('p');
+ p.innerHTML = "Your age is " + 
 }</script>
