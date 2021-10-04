@@ -6,7 +6,7 @@
     <form>
 Born (year): <input value="2007" type="number" name="startt" id="startt"/>
 Now (year): <input value="2021" type="number" name="endd" id="endd"/>
-<input type="Submit" onclick="createChart(startt,endd)"/>
+<input type="button" value="Calculate my age!" onclick="createChart(startt,endd)"/>
 </form>
   </body>
 </html>
@@ -14,11 +14,13 @@ Now (year): <input value="2021" type="number" name="endd" id="endd"/>
 var end = 0;
 var start = 0;
 var forEnd = 0;
+var age = 0;
                                         }
 function createChart(startNumber,endNumber){
   start = startNumber
   end = endNumber;
-  forEnd = end + 1;
+  age = end - start;
+  
  var p = document.createElementById('p');
- p.innerHTML = "Your age is " + 
+ p.innerHTML = "Your age is " + age + "."
 }</script>
