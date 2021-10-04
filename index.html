@@ -4,9 +4,31 @@
   </head>
   <body>
     <form>
-<input type="text" id="prefix"/>
-<input type="text" id="suffix"/>
-<input type="button" onclick="foo(document.getElementById('prefix').value,)"/>
+Prefix (text): <input type="text" name="pree" id="pree"/>
+Suffix (text): <input type="text" name="sufff" id="sufff"/>
+Born (year): <input type="number" name="startt" id="startt"/>
+Now (year): <input type="number" name="endd" id="endd"/>
+<input type="button" onclick="createChart(pree,sufff,startt,endd)"/>
 </form>
   </body>
 </html>
+<script>
+var end = 0;
+var start = 0;
+var forEnd = 0;
+var prefix = 0;
+var suffix = 0;
+                                        }
+function createChart(setPre,setSuff,startNumber,endNumber){
+  start = startNumber;
+  end = endNumber;
+  forEnd = end + 1;
+  prefix = setPre;
+  suffix = setSuff;
+  for(year = start; year < forEnd; year++){
+  var number = year - start;
+  write(prefix + number + suffix);
+  write(year);
+  write("\n");
+}
+}</script>
